@@ -20,7 +20,7 @@ import db.Kategorija;
 import db.VrstaKategorije;
 
 public class CategoryActivity extends Activity {
-
+//lklklklk
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
