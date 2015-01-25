@@ -35,9 +35,6 @@ public class Outcome extends IncomeOutcomeControler{
 	}
 
 
-
-
-
 	@Override
 	public String getNslov() {
 		// TODO Auto-generated method stub

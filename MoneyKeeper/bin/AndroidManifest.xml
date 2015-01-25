@@ -21,13 +21,19 @@
             android:name="AA_DB_VERSION"
             android:value="1" />
 
+        <activity android:name=".SplashScreenActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
@@ -38,7 +44,7 @@
         </activity>
         <activity android:name=".CategoryActivity" >
         </activity>
-        <activity android:name="SettingsActivity" >
+        <activity android:name=".SettingsActivity" >
         </activity>
         <activity android:name=".StatisticsActivity" >
         </activity>
@@ -62,15 +68,14 @@
         </activity>
         <activity android:name=".ListViewExampleActivity" >
         </activity>
-        
         <activity android:name=".TransakcijeControler" >
         </activity>
         <activity android:name=".IncomeOutcomeControler" >
         </activity>
-        <activity  android:name= ".Outcome" >
-        </activity>		<activity  android:name= ".Transactions" >
+        <activity android:name=".Outcome" >
         </activity>
-
+        <activity android:name=".Transactions" >
+        </activity>
         <activity
             android:name=".CategoriesActivity"
             android:label="@string/title_activity_categories" >

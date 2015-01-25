@@ -1,6 +1,7 @@
 package com.example.moneykeeper;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +19,26 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		final Context context = this;
+
+		boolean firstrun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+				.getBoolean("firstrun", true);
+		if (firstrun) {
+
+			new AlertDialog.Builder(this)
+					.setTitle("Welcome!")
+					// set the Title text
+					.setIcon(R.drawable.ic_launcher)
+					// Set the picture in the top left of the popup
+					.setMessage(
+							"This dialog will only appear once."
+									+ " In order to see it again you must either clear the app data (settings->apps->ManageAps) or uninstall then reinstall the app.")
+					.setNeutralButton("OK", null).show(); // Sets the button
+															// type
+
+		}
+		// Save the state with shared preferences
+		getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
+				.putBoolean("firstrun", false).commit();
 
 		// gumb za ulaz u funkc. transakcije
 		ImageButton imgTransaction = (ImageButton) findViewById(R.id.imgTransaction);
