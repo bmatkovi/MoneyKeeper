@@ -22,6 +22,8 @@ public class MainActivity extends Activity {
 
 		boolean firstrun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
 				.getBoolean("firstrun", true);
+		
+		//dialog prilikom prvog pokretanja
 		if (firstrun) {
 
 			new AlertDialog.Builder(this)
