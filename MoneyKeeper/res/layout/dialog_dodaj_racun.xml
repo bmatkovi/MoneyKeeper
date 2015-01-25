@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/txt_Unesi_Naziv_Racuna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/naziv"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/txt_Opis_Racuna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/opis"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/txt_Iznos_Racuna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/iznos"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnSpremi11"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/spremi" />
+
+    <Button
+        android:id="@+id/btnIzlaz1"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/izlaz" />
+
+    <Button
+        android:id="@+id/btnPrikaz111"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/prikaz" />
+ 
+</LinearLayout>

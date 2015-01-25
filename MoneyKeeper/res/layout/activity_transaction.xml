@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btnCloseTransaction"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back" />
+
+    <TextView
+        android:id="@+id/lab_Stanje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stanje računa"
+        android:textSize="16dp" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="150dp"
+        android:layout_height="60dp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="@string/incomi" />
+
+    <ListView
+        android:id="@+id/listviewTransI"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.05" />
+    
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:text="@string/outcomi" />
+    
+    <ListView
+        android:id="@+id/listviewTransO"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.05" />
+    	
+
+</LinearLayout>
