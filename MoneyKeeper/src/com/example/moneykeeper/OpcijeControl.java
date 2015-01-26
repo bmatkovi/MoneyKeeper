@@ -165,6 +165,7 @@ public abstract class OpcijeControl extends Activity {
 				});
 
 				// gumb za prikaz podataka
+				/*
 				Button prikaz = (Button) dialog.findViewById(R.id.btnPrikaz111);
 				prikaz.setOnClickListener(new OnClickListener() {
 					@Override
@@ -189,11 +190,12 @@ public abstract class OpcijeControl extends Activity {
 						Toast.makeText(getBaseContext(), builder.toString(),
 								Toast.LENGTH_LONG).show();
 						// new Delete().from(Korisnik.class).execute();
-					*/
+					*//*
 					}
 					
 						
 				});
+		*/
 
 				dialog.show();
 			}

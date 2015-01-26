@@ -78,6 +78,7 @@ public class CategoryActivity extends Activity {
 		});
 
 		// gumb za prikaz kategorija
+		/*
 		Button btnPrikazKategorija = (Button) findViewById(R.id.btnPrikazKategorija);
 		btnPrikazKategorija.setOnClickListener(new OnClickListener() {
 
@@ -97,5 +98,6 @@ public class CategoryActivity extends Activity {
 						Toast.LENGTH_LONG).show();
 			}
 		});
+		*/
 	}
 }

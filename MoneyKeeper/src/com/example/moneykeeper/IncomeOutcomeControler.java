@@ -160,7 +160,9 @@ import db.Transakcija;
 							startActivity(i);
 						}
 					});
+					
 					// gumb za prikaz
+					/*
 					Button prikaz = (Button) dialog.findViewById(R.id.btn_prikaz);
 					prikaz.setOnClickListener(new OnClickListener() {
 
@@ -194,6 +196,7 @@ import db.Transakcija;
 							toastIt(builder.toString());
 						}
 					});
+					*/
 					// gumb za spremanje unešenih podataka u dialog
 					Button spremiButton = (Button) dialog
 							.findViewById(R.id.btn_Spremi11);

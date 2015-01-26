@@ -78,6 +78,7 @@
         android:layout_marginTop="5dp"
         android:text="@string/izlaz" />
 
+    <!--  
     <Button
         android:id="@+id/btn_prikaz"
         style="?android:attr/buttonStyleSmall"
@@ -85,5 +86,5 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="@string/prikaz" />
-
+-->
 </LinearLayout>
