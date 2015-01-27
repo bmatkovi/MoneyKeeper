@@ -37,18 +37,21 @@ public abstract class TransakcijeControler extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(getLayout());
-		// init();
+
 		final Context context = this;
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 
-		// dohvaæanje transakcija iz baze podataka
-
+		/*
+		 * dohvaæanje transakcija iz baze podataka
+		 */
 		List<Transakcija> kat = Transakcija.getTransakcions();
 
 		List<String> opis = null;
 		opis = new ArrayList<String>();
 
-		// pretvaranje liste transakcija u string, ovisno o atributima
+		/*
+		 * pretvaranje liste transakcija u string
+		 */
 		StringBuilder builderTransakcija = new StringBuilder();
 		for (Transakcija transakcija : kat) {
 			builderTransakcija.append(transakcija.opis).append("\n");
@@ -59,7 +62,6 @@ public abstract class TransakcijeControler extends Activity {
 				this, R.layout.activity_transaction, R.id.label, opis);
 
 		List<Racun> stanje = Racun.getRacuni();
-		// stanje = new Delete().from(Racun.class).execute();
 
 		StringBuilder builder = new StringBuilder();
 		for (Racun racun : stanje) {
@@ -98,20 +100,18 @@ public abstract class TransakcijeControler extends Activity {
 
 		});
 
-		// lista priljeva novca
+		/*
+		 * lista priljeva novca, popis transakcija unešenih kao prihodi
+		 */
 		List<Transakcija> promet = Transakcija.getTransakcions();
 		final ArrayList<String> list11 = new ArrayList<String>();
 
 		StringBuilder builder1 = new StringBuilder();
 		for (Transakcija tr : promet) {
 			if (tr.vrsta == 1) {
-				builder1.append("Iznos: ").append(tr.iznos)
-				// .append("\n")
-						.append(" Opis: ").append(tr.opis)
-						// .append("\n")
-						.append(" Kategorija: ")
-						// .append(tr.Kategorija.naziv)
-						.append("\n");
+				builder1.append("Iznos: ").append(tr.iznos).append(" Opis: ")
+						.append(tr.opis).append(" Kategorija: ")
+						.append(tr.Kategorija.naziv).append("\n");
 
 				list11.add("Iznos: " + tr.iznos + "\n" + "Opis: " + tr.opis
 						+ "\n" + "Kategorija: " + tr.Kategorija.naziv);
@@ -143,39 +143,24 @@ public abstract class TransakcijeControler extends Activity {
 			}
 		});
 
-		// lista odljeva novca
-		// ArrayList<Integer> iznosi = new ArrayList<Integer>();
-
+		/*
+		 * // lista odljeva novca
+		 */
 		List<Transakcija> promet1 = Transakcija.getTransakcions();
-		// stanje = new Delete().from(Racun.class).execute();
-
 		final ArrayList<String> listO = new ArrayList<String>();
 
 		StringBuilder builder11 = new StringBuilder();
 		for (Transakcija tr : promet1) {
 			if (tr.vrsta == 0) {
-				builder11.append("Iznos: ").append(tr.iznos)
-				// .append("\n")
-						.append(" Opis: ").append(tr.opis)
-						// .append("\n")
-						.append("Kategorija: ")
-						// .append(tr.Kategorija.naziv)
-						.append("\n");
+				builder11.append("Iznos: ").append(tr.iznos).append(" Opis: ")
+						.append(tr.opis).append("Kategorija: ").append("\n");
 				listO.add("Iznos: " + tr.iznos + "\n" + "Opis: " + tr.opis
 						+ "\n" + "Kategorija: " + tr.Kategorija.naziv);
-			}// +"\n"+"Kategorija: "+tr.Kategorija.naziv.toString()+"\n"
+			}
 
 		}
 
 		final ListView listview11 = (ListView) findViewById(R.id.listviewTransO);
-
-		// final ArrayList<String> ispis = new ArrayList<String>();
-		// for (int i =0; i < builder11.length(); i++) {
-
-		// ispis.add(builder11.toString());
-		// ispis.add("Iznos: "+(iznosi.get(i)).toString());
-
-		// }
 
 		final StableArrayAdapter adapterC = new StableArrayAdapter(this,
 				android.R.layout.simple_list_item_1, listO);
@@ -204,7 +189,9 @@ public abstract class TransakcijeControler extends Activity {
 
 	}
 
-	// kreiranje option menija sa definiranim itemima
+	/*
+	 * kreiranje option menija sa definiranim itemima
+	 */
 	public static final int PRIHOD = Menu.FIRST;
 	public static final int RASHOD = Menu.FIRST + 1;
 

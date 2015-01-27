@@ -49,19 +49,25 @@ public abstract class IncomeOutcomeControler extends Activity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(getLayout());
-		
-		// gumb za otvaranje dialoga za unos prihoda novca
+
+		/*
+		 * gumb za otvaranje dialoga za unos prihoda novca
+		 */
 		button = (Button) findViewById(getButon());
 		button.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View arg0) {
-				// dialog za unos podataka
 
+				/*
+				 * dialog za unos podataka
+				 */
 				final Dialog dialog = new Dialog(context);
 				dialog.setContentView(getDialog());
 				dialog.setTitle(getNslov());
 
-				// padajuæa lista za odabir moguæih kategorija
+				/*
+				 * padajuæa lista za odabir moguæih kategorija
+				 */
 				final Spinner sp = (Spinner) dialog
 						.findViewById(R.id.spin_KategorijaO);
 
@@ -102,11 +108,12 @@ public abstract class IncomeOutcomeControler extends Activity {
 					@Override
 					public void onNothingSelected(AdapterView<?> parent) {
 						// TODO Auto-generated method stub
-
 					}
 				});
 
-				// padajuæa lista za odabir korisnika
+				/*
+				 * padajuæa lista za odabir korisnika
+				 */
 				final Spinner sp1 = (Spinner) dialog
 						.findViewById(R.id.spin_KorisnikO);
 
@@ -151,7 +158,9 @@ public abstract class IncomeOutcomeControler extends Activity {
 					}
 				});
 
-				// gumb za izlaz
+				/*
+				 * gumb za izlaz
+				 */
 				Button dialogButton = (Button) dialog
 						.findViewById(R.id.btn_Izlaz1);
 				dialogButton.setOnClickListener(new OnClickListener() {
@@ -163,35 +172,9 @@ public abstract class IncomeOutcomeControler extends Activity {
 					}
 				});
 
-				// gumb za prikaz
 				/*
-				 * Button prikaz = (Button)
-				 * dialog.findViewById(R.id.btn_prikaz);
-				 * prikaz.setOnClickListener(new OnClickListener() {
-				 * 
-				 * @Override public void onClick(View v) {
-				 * 
-				 * // new Delete().from(Racun.class).execute(); // new
-				 * Delete().from(Transakcija.class).execute(); List<Transakcija>
-				 * trans = Transakcija.getTransakcions(); StringBuilder builder
-				 * = new StringBuilder(); for (Transakcija transakcija : trans)
-				 * { if (transakcija.vrsta == getVrsta()) {
-				 * 
-				 * builder.append("Iznos: ")
-				 * .append(transakcija.iznos).append("\n") .append("Opis: ")
-				 * .append(transakcija.opis).append("\n") .append("Datum: ")
-				 * .append(transakcija.datum).append("\n") .append("Vrijeme: ")
-				 * .append(transakcija.vrijeme)
-				 * .append("\n").append("Kategorija: ")
-				 * .append(transakcija.Kategorija.naziv)
-				 * .append("\n").append("Korisnik: ")
-				 * .append(transakcija.Korisnik.ime) .append("\n");
-				 * 
-				 * } } //Toast.makeText(getBaseContext(),
-				 * builder.toString(),Toast.LENGTH_LONG).show();
-				 * toastIt(builder.toString()); } });
+				 * gumb za spremanje unešenih podataka u dialog
 				 */
-				// gumb za spremanje unešenih podataka u dialog
 				Button spremiButton = (Button) dialog
 						.findViewById(R.id.btn_Spremi11);
 				spremiButton.setOnClickListener(new OnClickListener() {
@@ -224,7 +207,7 @@ public abstract class IncomeOutcomeControler extends Activity {
 
 							List<Kategorija> kk = Kategorija.getKategorije();
 							for (Kategorija kategorija : kk) {
-								if (kategorija.naziv == varKategorija) {
+								if (kategorija.naziv.equals(varKategorija)) {
 								} else {
 									katt.save();
 								}
@@ -235,7 +218,7 @@ public abstract class IncomeOutcomeControler extends Activity {
 
 							List<Korisnik> ko = Korisnik.getKorisnici();
 							for (Korisnik korisnik : ko) {
-								if (korisnik.ime == varKorisnik) {
+								if (korisnik.ime.equals(varKorisnik)) {
 								} else {
 									kor.save();
 								}
@@ -304,6 +287,5 @@ public abstract class IncomeOutcomeControler extends Activity {
 			}
 		});
 	}
-	
-	
+
 }

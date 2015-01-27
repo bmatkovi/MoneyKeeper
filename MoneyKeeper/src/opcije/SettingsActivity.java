@@ -25,7 +25,9 @@ public class SettingsActivity extends Activity {
 		final Context context = this;
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 
-		// gumb za otvaranje dialoga za unos korisnièkih podataka
+		/*
+		 * gumb za otvaranje dialoga za unos korisnièkih podataka
+		 */
 		Button btnDodajKorisnika = (Button) findViewById(R.id.btnDodajKorisnika);
 		btnDodajKorisnika.setOnClickListener(
 
@@ -35,22 +37,12 @@ public class SettingsActivity extends Activity {
 
 				Intent i = new Intent(context, KorisnikActivity.class);
 				startActivity(i);
-
-				/*
-				 * final MyDialog dialog = new MyDialog(SettingsActivity.this);
-				 * dialog.displayDialog(new OnClickListener() {
-				 * 
-				 * @Override public void onClick(View v) {
-				 * 
-				 * Toast.makeText(getBaseContext(), "Dodani su podaci",
-				 * Toast.LENGTH_SHORT).show(); dialog.getDialog().dismiss(); }
-				 * });
-				 */
-
 			}
 		});
 
-		// gumb za otvaranje dialoga za unos racuna
+		/*
+		 * gumb za otvaranje dialoga za unos racuna
+		 */
 		Button btnDodajRacun = (Button) findViewById(R.id.btn_dodaj_racun);
 		btnDodajRacun.setOnClickListener(
 
@@ -62,8 +54,9 @@ public class SettingsActivity extends Activity {
 
 			}
 		});
-
-		// gumb za otvaranje dialoga za postavljanje alarma TODO!!
+		/*
+		 * gumb za otvaranje dialoga za postavljanje alarma TODO!!
+		 */
 		Button btnDodajAlarm = (Button) findViewById(R.id.btn_dodaj_alarm);
 		btnDodajAlarm.setOnClickListener(
 
@@ -75,6 +68,9 @@ public class SettingsActivity extends Activity {
 		});
 	}
 
+	/*
+	 * menu, odabir za izlaz iz funkcionalnosti
+	 */
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
