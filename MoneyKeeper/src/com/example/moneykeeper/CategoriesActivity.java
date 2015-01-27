@@ -3,25 +3,26 @@ package com.example.moneykeeper;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.activeandroid.query.Delete;
-import com.activeandroid.query.Select;
-
-import db.Kategorija;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+import db.Kategorija;
 
 public class CategoriesActivity extends ListActivity {
 
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 
+	    getActionBar().setDisplayHomeAsUpEnabled(true);
+
+		
 		// dohvaæanje kategorija iz baze i spremanje u listu
 		List<Kategorija> kat = Kategorija.getKategorije();
 
@@ -52,6 +53,8 @@ public class CategoriesActivity extends ListActivity {
 	public static final int KATEGORIJA = Menu.FIRST;
 	public static final int ZATVORI = Menu.FIRST+1;
 
+	
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
@@ -73,9 +76,17 @@ public class CategoriesActivity extends ListActivity {
 			Intent mainActivity = new Intent(this, MainActivity.class);
 			this.startActivity(mainActivity);
 			return true;
+			
+		case android.R.id.home:
+	        NavUtils.navigateUpFromSameTask(this);
+	        return true;
+	        
 
 		default:
 			return super.onOptionsItemSelected(item);
 		}
 	}
+	
+	
+	
 }

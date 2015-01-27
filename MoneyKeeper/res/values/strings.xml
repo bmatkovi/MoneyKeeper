@@ -41,5 +41,6 @@
     <string name="incomi">Prihodi</string>
     <string name="outcomi">Troškovi</string>
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="title_activity_proba">ProbaActivity</string>
 
 </resources>

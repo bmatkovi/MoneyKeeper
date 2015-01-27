@@ -16,6 +16,8 @@ public class MainActivity extends Activity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+		
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		final Context context = this;
@@ -59,7 +61,7 @@ public class MainActivity extends Activity {
 		imgCategory.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(context, CategoriesActivity.class);
+				Intent i = new Intent(context, ProbaActivity.class);
 				startActivity(i);
 
 			}

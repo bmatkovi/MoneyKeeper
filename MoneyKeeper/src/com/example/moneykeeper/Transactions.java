@@ -23,9 +23,7 @@ public class Transactions extends TransakcijeControler{
 		Toast.makeText(getApplicationContext(), msg,Toast.LENGTH_LONG).show();
 	}
 
-	public int getIDButton() {
-		return R.id.btnCloseTransaction;
-	}
+	
 	@Override
 	public void init() {
 		// TODO Auto-generated method stub

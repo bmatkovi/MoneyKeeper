@@ -8,6 +8,7 @@ import android.R.layout;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,8 +19,6 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.activeandroid.query.Select;
-import com.example.moneykeeper.R;
-import com.example.moneykeeper.R.id;
 
 import db.Racun;
 import db.Transakcija;
@@ -162,17 +161,7 @@ public class TransactionActivity extends TransakcijeControler {
 		  adapterC.notifyDataSetChanged(); view.setAlpha(1); } }); } });
 		 
 
-		Button btnCloseTransaction = (Button) findViewById(R.id.btnCloseTransaction);
-		btnCloseTransaction.setOnClickListener(
-
-		new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-	//			Intent i = new Intent(context, MainActivity.class);
-		//		startActivity(i);
-			}
-		});
+		
 
 	}
 
@@ -193,6 +182,9 @@ public class TransactionActivity extends TransakcijeControler {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case PRIHOD:
+			
+			
+			
 			Intent incomeActivity = new Intent(this, Income.class);
 			this.startActivity(incomeActivity);
 			return true;
@@ -201,6 +193,11 @@ public class TransactionActivity extends TransakcijeControler {
 			Intent outcomeActivity = new Intent(this, Outcome.class);
 			this.startActivity(outcomeActivity);
 			return true;
+			
+		case android.R.id.home:
+			NavUtils.navigateUpFromSameTask(this);
+			return true;
+			
 		default:
 			return super.onOptionsItemSelected(item);
 		}
@@ -211,11 +208,7 @@ public class TransactionActivity extends TransakcijeControler {
 		// TODO Auto-generated method stub
 		
 	}
-	@Override
-	public int getIDButton() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
 
 	@Override
 	public int getLayout() {

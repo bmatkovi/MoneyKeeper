@@ -1,6 +1,7 @@
 package com.example.moneykeeper;
 
 
+
 public class Primjer2Activity extends TransakcijeControler{
 
 	@Override
@@ -14,11 +15,7 @@ public class Primjer2Activity extends TransakcijeControler{
 		
 	}
 
-	@Override
-	public int getIDButton() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
 
 	@Override
 	public void toastIt(String msg) {

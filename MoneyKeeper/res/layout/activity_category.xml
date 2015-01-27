@@ -1,34 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-
-    <TextView
-        android:id="@+id/txtNaslovCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/drugi_ekran" />
-
-    <Button
-        android:id="@+id/btnCloseCategory"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/back" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
     <TextView
         android:id="@+id/textViewUnesiKategoriju"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
         android:text="@string/unesi_kategoriju"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textSize="25sp"
+        android:textStyle="normal" />
 
     <EditText
         android:id="@+id/editTextUnesi_Kategoriju"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_below="@id/textViewUnesiKategoriju"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/editbox_background"
         android:inputType="textPostalAddress" >
 
         <requestFocus />
@@ -38,26 +31,35 @@
         android:id="@+id/textViewOpisKategorije"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextUnesi_Kategoriju"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
         android:text="@string/opis_kategorije"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textSize="25sp"
+        android:textStyle="normal" />
 
     <EditText
         android:id="@+id/editTextOpisKategorije"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPostalAddress" />
+        android:layout_below="@id/textViewOpisKategorije"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/editbox_background"
+        android:inputType="textPostalAddress" >
+
+    </EditText>
 
     <Button
         android:id="@+id/btnSpremiKategoriju"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/spremi" />
-<!--  
-    <Button
-        android:id="@+id/btnPrikazKategorija"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/prikaz" />
--->
-</LinearLayout>
+        android:layout_below="@+id/editTextOpisKategorije"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/spremi"
+        android:textSize="18sp" >
+    </Button>
+
+</RelativeLayout>

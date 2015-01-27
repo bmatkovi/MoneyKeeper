@@ -6,6 +6,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -28,18 +30,8 @@ public class CategoryActivity extends Activity {
 		setContentView(R.layout.activity_category);
 		final Context context = this;
 
-		// gumb za izlaz iz funkc. kategorija
-		Button btnCloseCategory = (Button) findViewById(R.id.btnCloseCategory);
-		btnCloseCategory.setOnClickListener(
-
-		new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent i = new Intent(context, MainActivity.class);
-				startActivity(i);
-			}
-		});
+	    getActionBar().setDisplayHomeAsUpEnabled(true);
+		
 
 		// gumb za spremanje unešenih podataka o novoj kategoriji
 		Button btnSpremiKategoriju = (Button) findViewById(R.id.btnSpremiKategoriju);
@@ -99,5 +91,15 @@ public class CategoryActivity extends Activity {
 			}
 		});
 		*/
+	}
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    switch (item.getItemId()) {
+	    // Respond to the action bar's Up/Home button
+	    case android.R.id.home:
+	        NavUtils.navigateUpFromSameTask(this);
+	        return true;
+	    }
+	    return super.onOptionsItemSelected(item);
 	}
 }

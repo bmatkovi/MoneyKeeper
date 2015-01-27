@@ -28,7 +28,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -43,14 +42,22 @@
         <activity android:name=".TransactionActivity" >
         </activity>
         <activity android:name=".CategoryActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.moneykeeper.CategoriesActivity" />
         </activity>
         <activity android:name=".SettingsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.moneykeeper.MainActivity" />
         </activity>
         <activity android:name=".StatisticsActivity" >
         </activity>
         <activity android:name=".KorisnikActivity" >
         </activity>
-        <activity android:name=".Income" >
+        <activity
+            android:name=".Income"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" >
         </activity>
         <activity android:name=".OutcomeActivity" >
         </activity>
@@ -75,10 +82,20 @@
         <activity android:name=".Outcome" >
         </activity>
         <activity android:name=".Transactions" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.moneykeeper.MainActivity" />
         </activity>
         <activity
             android:name=".CategoriesActivity"
             android:label="@string/title_activity_categories" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.moneykeeper.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ProbaActivity"
+            android:label="@string/title_activity_proba" >
         </activity>
     </application>
 
