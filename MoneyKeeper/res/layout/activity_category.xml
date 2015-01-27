@@ -18,9 +18,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewUnesiKategoriju"
+        android:layout_marginBottom="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="15dp"
         android:background="@android:drawable/editbox_background"
         android:inputType="textPostalAddress" >
 
@@ -43,23 +44,27 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewOpisKategorije"
+        android:layout_marginBottom="30dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="15dp"
         android:background="@android:drawable/editbox_background"
         android:inputType="textPostalAddress" >
-
     </EditText>
 
     <Button
         android:id="@+id/btnSpremiKategoriju"
-        android:layout_width="wrap_content"
+        style="@style/button_text"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editTextOpisKategorije"
+        android:layout_alignLeft="@+id/editTextOpisKategorije"
+        android:layout_alignRight="@+id/editTextOpisKategorije"
+        android:layout_alignStart="@+id/editTextOpisKategorije"
         android:layout_below="@+id/editTextOpisKategorije"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/green_button"
         android:text="@string/spremi"
-        android:textSize="18sp" >
-    </Button>
+        android:textSize="18sp" />
 
 </RelativeLayout>

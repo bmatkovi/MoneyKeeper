@@ -2,6 +2,8 @@ package db;
 
 import java.util.List;
 
+import android.content.ClipData.Item;
+
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
@@ -83,15 +85,27 @@ public class Kategorija extends Model {
 	public void setVrstaKategorije(VrstaKategorije vrstaKategorije) {
 		VrstaKategorije = vrstaKategorije;
 	}
-	
-	public static List<Kategorija> getKategorije(){
-		
+
+	public static List<Kategorija> getKategorije() {
+
 		return new Select().all().from(Kategorija.class).execute();
 	}
 
-public static List<Kategorija> DeleteKategorije(){
-		
+	public static List<Kategorija> DeleteKategorije() {
+
 		return new Delete().from(Kategorija.class).execute();
+	}
+	
+	public static Kategorija getRandom() {
+	    return new Select().from(Kategorija.class).orderBy("RANDOM()").executeSingle();
+	}
+	
+	public static List<Kategorija> getAll(VrstaKategorije vrsta) {
+	    return new Select()
+	        .from(Kategorija.class)
+	        .where("VrstaKategorije = ?", vrsta.getId())
+	        .orderBy("Name ASC")
+	        .execute();
 	}
 
 }

@@ -6,8 +6,14 @@
 
     <Button
         android:id="@+id/btn_Inc"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/prihod" />
+
+    <Button
+        android:id="@+id/izlaz"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/izlaz" />
 
 </LinearLayout>

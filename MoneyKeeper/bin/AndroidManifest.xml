@@ -54,6 +54,9 @@
         <activity android:name=".StatisticsActivity" >
         </activity>
         <activity android:name=".KorisnikActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.moneykeeper.SettingsActivity" />
         </activity>
         <activity
             android:name=".Income"
@@ -62,6 +65,9 @@
         <activity android:name=".OutcomeActivity" >
         </activity>
         <activity android:name=".RacunActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.moneykeeper.SettingsActivity" />
         </activity>
         <activity android:name="alarm.AlarmActivity" >
         </activity>
@@ -79,7 +85,9 @@
         </activity>
         <activity android:name=".IncomeOutcomeControler" >
         </activity>
-        <activity android:name=".Outcome" >
+        <activity
+            android:name=".Outcome"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" >
         </activity>
         <activity android:name=".Transactions" >
             <meta-data
@@ -96,6 +104,14 @@
         <activity
             android:name=".ProbaActivity"
             android:label="@string/title_activity_proba" >
+        </activity>
+        <activity
+            android:name=".ActiveActivity"
+            android:label="@string/title_activity_active" >
+        </activity>
+        <activity
+            android:name=".GuideActivity"
+            android:label="@string/title_activity_guide" >
         </activity>
     </application>
 

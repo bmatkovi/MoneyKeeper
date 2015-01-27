@@ -3,6 +3,7 @@ package com.example.moneykeeper;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.R.string;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,8 +26,11 @@ public class CategoriesActivity extends ListActivity {
 		
 		// dohvaæanje kategorija iz baze i spremanje u listu
 		List<Kategorija> kat = Kategorija.getKategorije();
+		
 
 		List<String> naziv =  new ArrayList<String>();
+		
+		List<String> vrstaKategorije = new ArrayList<String>();
 
 		// prikaz odabranih atributa u obliku stringa
 		StringBuilder builder = new StringBuilder();
@@ -38,6 +42,15 @@ public class CategoriesActivity extends ListActivity {
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				R.layout.activity_categories, R.id.label, naziv);
 		setListAdapter(adapter);
+		
+		/*
+	    if (k.startsWith("Windows7") || adapter.startsWith("iPhone")
+	        || s.startsWith("Solaris")) {
+	      imageView.setImageResource(R.drawable.pic_postavke);
+	    } else {
+	      imageView.setImageResource(R.drawable.pic_racuni);
+	    }*/
+		
 
 	}
 
@@ -47,6 +60,10 @@ public class CategoriesActivity extends ListActivity {
 		Kategorija kat = new Kategorija(); 
 		//new Delete().from(Kategorija.class).where("idKategorije= ?", kat.getIdKategorije()).executeSingle();
 		Toast.makeText(this, item + " selected", Toast.LENGTH_LONG).show();
+		
+		
+		
+		
 	}
 
 	// kreiranje option gumba i njegovih itema

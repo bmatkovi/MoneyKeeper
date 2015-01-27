@@ -12,10 +12,11 @@ public class ProbaActivity extends ListActivity {
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 		
+		
 		List<Kategorija> kat = Kategorija.getKategorije();
 
 		List<String> naziv =  new ArrayList<String>();
-		/*
+		
 		// prikaz odabranih atributa u obliku stringa
 				StringBuilder builder = new StringBuilder();
 				for (Kategorija kategorija : kat) {
@@ -26,11 +27,18 @@ public class ProbaActivity extends ListActivity {
 				ArrayAdapter<String> adaptera = new ArrayAdapter<String>(this,
 						R.layout.activity_categories, R.id.label, naziv);
 				setListAdapter(adaptera);
-		*/
+		
+		
+		/*
 		String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
 				"Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
 				"Linux", "OS/2" };
 		MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(this, values);
 		setListAdapter(adapter);
+		
+		*/
+		
+		
+		
 	}
 }

@@ -8,10 +8,10 @@
     <Button
         android:id="@+id/btnDodajKorisnika"
         style="@style/button_text"
-        android:layout_width="wrap_content"
+        android:layout_width="218dp"
         android:layout_height="wrap_content"
         android:background="@drawable/green_button"
-        android:text="@string/dodaj_korisnika"
+        android:text="@string/guideKorisnik"
         android:textSize="18sp" 
         />
 
@@ -24,13 +24,5 @@
         android:text="@string/racun"
         android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/btn_dodaj_alarm"
-        style="@style/button_text"
-        android:layout_width="218dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/green_button"
-        android:text="@string/alarm"
-        android:textSize="18sp" />
 
 </LinearLayout>

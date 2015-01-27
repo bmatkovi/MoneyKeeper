@@ -42,5 +42,8 @@
     <string name="outcomi">Troškovi</string>
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
     <string name="title_activity_proba">ProbaActivity</string>
+    <string name="title_activity_active">ActiveActivity</string>
+    <string name="title_activity_guide">GuideActivity</string>
+    <string name="guideKorisnik">Kreiraj korisnika</string>
 
 </resources>
