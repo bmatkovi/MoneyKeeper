@@ -41,51 +41,35 @@
 
         <activity android:name=".TransactionActivity" >
         </activity>
-<<<<<<< HEAD
-        <activity android:name="opcije.CategoryActivity" >
-        </activity>
-        <activity android:name="opcije.SettingsActivity" >
-        </activity>
-        <activity android:name=".StatisticsActivity" >
-        </activity>
-        <activity android:name="opcije.KorisnikActivity" >
-        </activity>
-        <activity android:name="transakcije.Income" >
-        </activity>
-        <activity android:name=".OutcomeActivity" >
-        </activity>
-        <activity android:name="opcije.RacunActivity" >
-=======
-        <activity android:name=".CategoryActivity" >
+        <activity android:name="kategorije.CategoryActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.moneykeeper.CategoriesActivity" />
+                android:value="kategorije.CategoriesActivity" />
         </activity>
-        <activity android:name=".SettingsActivity" >
+        <activity android:name="opcije.SettingsActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.moneykeeper.MainActivity" />
         </activity>
         <activity android:name=".StatisticsActivity" >
         </activity>
-        <activity android:name=".KorisnikActivity" >
+        <activity android:name="opcije.KorisnikActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.moneykeeper.SettingsActivity" />
+                android:value="opcije.SettingsActivity" />
         </activity>
         <activity
-            android:name=".Income"
+            android:name="transakcije.Income"
             android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" >
         </activity>
         <activity android:name=".OutcomeActivity" >
         </activity>
-        <activity android:name=".RacunActivity" >
+        <activity android:name="opcije.RacunActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.moneykeeper.SettingsActivity" />
->>>>>>> 9851da4d100a3788d40197ae70f50f695de2b6c1
+                android:value="opcije.SettingsActivity" />
         </activity>
-        <activity android:name=".alarm.AlarmActivity" >
+        <activity android:name="alarm.AlarmActivity" >
         </activity>
         <activity android:name=".alarm.NotifyService" >
         </activity>
@@ -101,20 +85,14 @@
         </activity>
         <activity android:name="transakcije.IncomeOutcomeControler" >
         </activity>
-<<<<<<< HEAD
-        <activity android:name="transakcije.Outcome" >
-        </activity>
-        <activity android:name="transakcije.Transactions" >
-=======
         <activity
-            android:name=".Outcome"
+            android:name="transakcije.Outcome"
             android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" >
         </activity>
-        <activity android:name=".Transactions" >
+        <activity android:name="transakcije.Transactions" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.moneykeeper.MainActivity" />
->>>>>>> 9851da4d100a3788d40197ae70f50f695de2b6c1
         </activity>
         <activity
             android:name="kategorije.CategoriesActivity"
