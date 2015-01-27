@@ -3,6 +3,8 @@ package com.example.moneykeeper;
 import java.util.ArrayList;
 import java.util.List;
 
+import opcije.SettingsActivity;
+
 import com.activeandroid.query.Select;
 import com.example.moneykeeper.R;
 import com.example.moneykeeper.R.id;

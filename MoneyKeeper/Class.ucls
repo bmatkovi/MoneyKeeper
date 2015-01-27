@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.8" icons="true" always-add-relationships="true" generalizations="true" realizations="true" 
   associations="true" dependencies="true" nesting-relationships="true">  
-  <class id="1" language="java" name="com.example.moneykeeper.CategoryActivity" project="MoneyKeeper" 
-    file="/MoneyKeeper/src/com/example/moneykeeper/CategoryActivity.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="1" language="java" name="kategorije.CategoryActivity" project="MoneyKeeper" 
+    file="/MoneyKeeper/src/kategorije/CategoryActivity.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="571" y="658"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="com.example.moneykeeper.SettingsActivity" project="MoneyKeeper" 
-    file="/MoneyKeeper/src/com/example/moneykeeper/SettingsActivity.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="opcije.SettingsActivity" project="MoneyKeeper" 
+    file="/MoneyKeeper/src/opcije/SettingsActivity.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="314" y="252"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -28,8 +28,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="com.example.moneykeeper.CategoriesActivity" project="MoneyKeeper" 
-    file="/MoneyKeeper/src/com/example/moneykeeper/CategoriesActivity.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="4" language="java" name="kategorije.CategoriesActivity" project="MoneyKeeper" 
+    file="/MoneyKeeper/src/kategorije/CategoriesActivity.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="310" y="674"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -46,45 +46,27 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="com.example.moneykeeper.Income" project="MoneyKeeper" 
-    file="/MoneyKeeper/src/com/example/moneykeeper/Income.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="758" y="481"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <dependency id="7">    
+  <dependency id="6">    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="3"/>  
   </dependency>  
-  <dependency id="8">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="4"/>  
-  </dependency>  
-  <dependency id="9">    
+  <dependency id="7">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="5"/>  
   </dependency>  
-  <dependency id="10">    
-    <bendpoint x="457" y="589"/>    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="5"/>  
-  </dependency>  
-  <dependency id="11">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="2"/>  
-  </dependency>  
-  <dependency id="12">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="5"/>  
-  </dependency>  
-  <dependency id="13">    
+  <dependency id="8">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="1"/>  
   </dependency>  
-  <dependency id="14">    
+  <dependency id="9">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <dependency id="10">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="11">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="5"/>  
   </dependency>  

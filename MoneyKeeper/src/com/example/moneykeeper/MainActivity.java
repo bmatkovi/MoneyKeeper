@@ -97,14 +97,14 @@ public class MainActivity extends Activity {
 
 	}
 
-<<<<<<< HEAD
+
 	/* (non-Javadoc)
 	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
 	 */
-=======
+
 	public static final int EXIT = Menu.FIRST;
 
->>>>>>> 9851da4d100a3788d40197ae70f50f695de2b6c1
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);

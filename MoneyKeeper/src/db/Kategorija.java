@@ -164,7 +164,7 @@ public class Kategorija extends Model {
 	public void setVrstaKategorije(VrstaKategorije vrstaKategorije) {
 		VrstaKategorije = vrstaKategorije;
 	}
-<<<<<<< HEAD
+
 	
 	/**
 	 * Gets the kategorije.
@@ -181,18 +181,9 @@ public class Kategorija extends Model {
  *
  * @return the list
  */
-public static List<Kategorija> DeleteKategorije(){
-		
-=======
-
-	public static List<Kategorija> getKategorije() {
-
-		return new Select().all().from(Kategorija.class).execute();
-	}
 
 	public static List<Kategorija> DeleteKategorije() {
 
->>>>>>> 9851da4d100a3788d40197ae70f50f695de2b6c1
 		return new Delete().from(Kategorija.class).execute();
 	}
 	
