@@ -28,7 +28,7 @@
     <string name="datum">Datum</string>
     <string name="vrieme">Vrijeme</string>
     <string name="kategorija">Kategorija</string>
-    <string name="korisnik">Korisnik</string>
+    <string name="korisnik">Novi korisnik</string>
     <string name="exit">Exit</string>
     <string name="trosak">Unos troška</string>
     <string name="prihod">Unos prihoda</string>
@@ -45,5 +45,8 @@
     <string name="title_activity_active">ActiveActivity</string>
     <string name="title_activity_guide">GuideActivity</string>
     <string name="guideKorisnik">Kreiraj korisnika</string>
+    <string name="popisKorisnika">Popis korisnika</string>
+    <string name="popisRacuna">Popis računa</string>
+    <string name="stanje">Stanje računa</string>
 
 </resources>

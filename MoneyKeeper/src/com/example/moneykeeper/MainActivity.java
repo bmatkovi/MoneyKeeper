@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
 		// dialog prilikom prvog pokretanja
 		if (firstrun) {
 
-			Intent i = new Intent(context, GuideActivity.class);
+			Intent i = new Intent(context, SettingsActivity.class);
 			startActivity(i);
 		}
 		// Save the state with shared preferences

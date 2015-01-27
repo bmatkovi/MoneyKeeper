@@ -44,7 +44,7 @@ public class KorisnikActivity extends OpcijeControl {
 	@Override
 	public String getNaslov() {
 		// TODO Auto-generated method stub
-		return "Korisniæki podaci";
+		return "Korisnièki podaci";
 	}
 
 	@Override
