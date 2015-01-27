@@ -1,5 +1,11 @@
+/*
+ * 
+ */
 package com.example.moneykeeper;
 
+import kategorije.CategoriesActivity;
+import opcije.SettingsActivity;
+import transakcije.Transactions;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -13,8 +19,15 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class MainActivity.
+ */
 public class MainActivity extends Activity {
 
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 
@@ -84,8 +97,14 @@ public class MainActivity extends Activity {
 
 	}
 
+<<<<<<< HEAD
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
+	 */
+=======
 	public static final int EXIT = Menu.FIRST;
 
+>>>>>>> 9851da4d100a3788d40197ae70f50f695de2b6c1
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
@@ -94,6 +113,9 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {

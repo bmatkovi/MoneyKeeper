@@ -41,6 +41,21 @@
 
         <activity android:name=".TransactionActivity" >
         </activity>
+<<<<<<< HEAD
+        <activity android:name="opcije.CategoryActivity" >
+        </activity>
+        <activity android:name="opcije.SettingsActivity" >
+        </activity>
+        <activity android:name=".StatisticsActivity" >
+        </activity>
+        <activity android:name="opcije.KorisnikActivity" >
+        </activity>
+        <activity android:name="transakcije.Income" >
+        </activity>
+        <activity android:name=".OutcomeActivity" >
+        </activity>
+        <activity android:name="opcije.RacunActivity" >
+=======
         <activity android:name=".CategoryActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -68,23 +83,29 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.moneykeeper.SettingsActivity" />
+>>>>>>> 9851da4d100a3788d40197ae70f50f695de2b6c1
         </activity>
-        <activity android:name="alarm.AlarmActivity" >
+        <activity android:name=".alarm.AlarmActivity" >
         </activity>
-        <activity android:name="alarm.NotifyService" >
+        <activity android:name=".alarm.NotifyService" >
         </activity>
         <activity android:name=".ShceduleClient" >
         </activity>
-        <activity android:name="alarm.ScheduleServicervice" >
+        <activity android:name=".alarm.ScheduleServicervice" >
         </activity>
-        <activity android:name="alarm.SecondActivity" >
+        <activity android:name=".alarm.SecondActivity" >
         </activity>
         <activity android:name=".ListViewExampleActivity" >
         </activity>
-        <activity android:name=".TransakcijeControler" >
+        <activity android:name="transakcije.TransakcijeControler" >
         </activity>
-        <activity android:name=".IncomeOutcomeControler" >
+        <activity android:name="transakcije.IncomeOutcomeControler" >
         </activity>
+<<<<<<< HEAD
+        <activity android:name="transakcije.Outcome" >
+        </activity>
+        <activity android:name="transakcije.Transactions" >
+=======
         <activity
             android:name=".Outcome"
             android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" >
@@ -93,9 +114,10 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.moneykeeper.MainActivity" />
+>>>>>>> 9851da4d100a3788d40197ae70f50f695de2b6c1
         </activity>
         <activity
-            android:name=".CategoriesActivity"
+            android:name="kategorije.CategoriesActivity"
             android:label="@string/title_activity_categories" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
