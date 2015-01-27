@@ -13,7 +13,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.moneykeeper.MyDialog;
+import com.example.moneykeeper.DialogControler;
 import com.example.moneykeeper.R;
 
 public class SettingsActivity extends Activity {

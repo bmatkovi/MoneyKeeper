@@ -26,20 +26,30 @@ import db.VrstaKategorije;
 
 public class CategoryActivity extends Activity {
 
+	/*
+	 * Kreiranje aktivnosti category, koja omogućuje kreiranje nove kategorije
+	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_category);
 		final Context context = this;
+		/*
+		 * kreiranje actionbara za navigaciju back, prema CategoriesActivity i
+		 */
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 
-	    getActionBar().setDisplayHomeAsUpEnabled(true);
-		
-
-		// gumb za spremanje une�enih podataka o novoj kategoriji
+		/*
+		 * gumb za spremanje unešenih podataka o novoj kategoriji
+		 */
 		Button btnSpremiKategoriju = (Button) findViewById(R.id.btnSpremiKategoriju);
 		btnSpremiKategoriju.setOnClickListener(
 
+		/*
+		 * Kreiranje onClick listenera, koji prepoznaje odgovarajuće elemente na
+		 * activity_category
+		 */
 		new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -50,6 +60,10 @@ public class CategoryActivity extends Activity {
 				String opisKategorije = ((EditText) findViewById(R.id.editTextOpisKategorije))
 						.getText().toString();
 
+				/*
+				 * Spremanje nove kategorije u bazu s odgovarajućom toast
+				 * porukom
+				 */
 				if (nazivKategorije != null && nazivKategorije.trim() != "") {
 					Kategorija kategorija = new Kategorija();
 
@@ -62,7 +76,7 @@ public class CategoryActivity extends Activity {
 					Toast.makeText(
 							getBaseContext(),
 							a != -1 ? "Dodana je kategorija!"
-									: "Dogodila se gre�ka!", Toast.LENGTH_LONG)
+									: "Dogodila se greška!", Toast.LENGTH_LONG)
 							.show();
 
 				} else {
@@ -71,38 +85,19 @@ public class CategoryActivity extends Activity {
 				}
 			}
 		});
-
-		// gumb za prikaz kategorija
-		/*
-		Button btnPrikazKategorija = (Button) findViewById(R.id.btnPrikazKategorija);
-		btnPrikazKategorija.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// new Delete().from(Kategorija.class).execute();
-
-				List<Kategorija> kat = null;
-				kat = new Select().all().from(Kategorija.class).execute();
-				StringBuilder builder = new StringBuilder();
-				for (Kategorija kategorija : kat) {
-					builder.append("Naziv: ").append(kategorija.naziv)
-							.append("\n").append("Opis: ")
-							.append(kategorija.opis).append("\n");
-				}
-				Toast.makeText(getBaseContext(), builder.toString(),
-						Toast.LENGTH_LONG).show();
-			}
-		});
-		*/
 	}
+
+	/*
+	 * Kreiranje back gumba na action navigation tabu
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-	    switch (item.getItemId()) {
-	    // Respond to the action bar's Up/Home button
-	    case android.R.id.home:
-	        NavUtils.navigateUpFromSameTask(this);
-	        return true;
-	    }
-	    return super.onOptionsItemSelected(item);
+		switch (item.getItemId()) {
+		// Respond to the action bar's Up/Home button
+		case android.R.id.home:
+			NavUtils.navigateUpFromSameTask(this);
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
 	}
 }

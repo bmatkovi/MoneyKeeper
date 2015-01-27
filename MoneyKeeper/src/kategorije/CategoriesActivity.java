@@ -23,60 +23,65 @@ import db.Kategorija;
 
 public class CategoriesActivity extends ListActivity {
 
+	/*
+	 * Kreiranje aktivnosti kategorija, koja prikazuje u listViewu sve
+	 * katergorije, omogućuje dodavanje novih u optionMenu
+	 */
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
+		/*
+		 * kreiranje actionbara za navigaciju back, prema MainActivity i
+		 */
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 
-	    getActionBar().setDisplayHomeAsUpEnabled(true);
-
-		
-		// dohva�anje kategorija iz baze i spremanje u listu
+		/*
+		 * dohvaćanje kategorija iz baze i spremanje u listu
+		 */
 		List<Kategorija> kat = Kategorija.getKategorije();
-		
-
-		List<String> naziv =  new ArrayList<String>();
-		
+		List<String> naziv = new ArrayList<String>();
 		List<String> vrstaKategorije = new ArrayList<String>();
 
-		// prikaz odabranih atributa u obliku stringa
+		/*
+		 * prikaz odabranih atributa u obliku stringa
+		 */
 		StringBuilder builder = new StringBuilder();
 		for (Kategorija kategorija : kat) {
 			builder.append(kategorija.naziv).append("\n");
 			naziv.add(kategorija.naziv);
 		}
 
+		/*
+		 * Kreiranje array adaptera, koji se prosljeđuje za prikaz u listViewu
+		 */
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				R.layout.activity_categories, R.id.label, naziv);
 		setListAdapter(adapter);
-		
-		/*
-	    if (k.startsWith("Windows7") || adapter.startsWith("iPhone")
-	        || s.startsWith("Solaris")) {
-	      imageView.setImageResource(R.drawable.pic_postavke);
-	    } else {
-	      imageView.setImageResource(R.drawable.pic_racuni);
-	    }*/
-		
 
 	}
 
+	/*
+	 * onClick listener za listView, koji u toastu vraća označenu vrijednost
+	 * TODO
+	 */
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		String item = (String) getListAdapter().getItem(position);
-		Kategorija kat = new Kategorija(); 
-		//new Delete().from(Kategorija.class).where("idKategorije= ?", kat.getIdKategorije()).executeSingle();
+		Kategorija kat = new Kategorija();
+
 		Toast.makeText(this, item + " selected", Toast.LENGTH_LONG).show();
-		
-		
-		
-		
+
 	}
 
-	// kreiranje option gumba i njegovih itema
-	public static final int KATEGORIJA = Menu.FIRST;
-	public static final int ZATVORI = Menu.FIRST+1;
+	/*
+	 * kreiranje option gumba i njegovih itema
+	 */
 
-	
-	
+	public static final int KATEGORIJA = Menu.FIRST;
+	public static final int ZATVORI = Menu.FIRST + 1;
+
+	/*
+	 * kreiranje menija, prikaz gumbova za dodavanje nove kategorije i izlaza
+	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
@@ -87,6 +92,9 @@ public class CategoriesActivity extends ListActivity {
 		return true;
 	}
 
+	/*
+	 * prikaz gumbova u action navigation tabu
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
@@ -98,17 +106,14 @@ public class CategoriesActivity extends ListActivity {
 			Intent mainActivity = new Intent(this, MainActivity.class);
 			this.startActivity(mainActivity);
 			return true;
-			
+
 		case android.R.id.home:
-	        NavUtils.navigateUpFromSameTask(this);
-	        return true;
-	        
+			NavUtils.navigateUpFromSameTask(this);
+			return true;
 
 		default:
 			return super.onOptionsItemSelected(item);
 		}
 	}
-	
-	
-	
+
 }

@@ -31,7 +31,13 @@ public class GuideActivity extends Activity {
 		setContentView(R.layout.activity_guide);
 		final Context context = this;
 
-		// gumb za otvaranje dialoga za unos korisni�kih podataka
+		/*
+		 * gumb za otvaranje dialoga za unos korisničkih podataka postavljamo
+		 * onClick listener koji otvara dijalog iz MyDialog klase, odnosno
+		 * poziva metodu displayDialog u toast ispisuje povratnu informaciju o
+		 * uspješnosti
+		 */
+
 		Button btnDodajKorisnika = (Button) findViewById(R.id.btnDodajKorisnika);
 		btnDodajKorisnika.setOnClickListener(
 
@@ -43,7 +49,8 @@ public class GuideActivity extends Activity {
 				 * Intent i = new Intent(context, KorisnikActivity.class);
 				 * startActivity(i);
 				 */
-				final MyDialog dialog = new MyDialog(GuideActivity.this);
+				final DialogControler dialog = new DialogControler(
+						GuideActivity.this);
 				dialog.displayDialog(new OnClickListener() {
 					@Override
 					public void onClick(View v) {
@@ -57,14 +64,19 @@ public class GuideActivity extends Activity {
 			}
 		});
 
-		// gumb za otvaranje dialoga za unos racuna
+		/*
+		 * gumb za otvaranje dialoga za unos racuna postavljamo onClick listener
+		 * koji otvara dijalog iz MyDialog klase, odnosno poziva metodu
+		 * displayRacun u toast ispisuje povratnu informaciju o uspješnosti
+		 */
 		Button btnDodajRacun = (Button) findViewById(R.id.btn_dodaj_racun);
 		btnDodajRacun.setOnClickListener(
 
 		new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				final MyDialog dialog = new MyDialog(GuideActivity.this);
+				final DialogControler dialog = new DialogControler(
+						GuideActivity.this);
 				dialog.displayRacun(new OnClickListener() {
 					@Override
 					public void onClick(View v) {
@@ -80,6 +92,10 @@ public class GuideActivity extends Activity {
 
 	}
 
+	/*
+	 * kreiranje menija u navigation tabu meni sadrži back opciju, koja vraća
+	 * korisnika na MainActivity
+	 */
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:

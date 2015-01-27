@@ -3,6 +3,8 @@
  */
 package com.example.moneykeeper;
 
+import com.example.moneykeeper.R;
+
 import kategorije.CategoriesActivity;
 import opcije.SettingsActivity;
 import transakcije.Transactions;
@@ -25,7 +27,9 @@ import android.widget.ImageButton;
  */
 public class MainActivity extends Activity {
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
 	 */
 	@Override
@@ -34,21 +38,30 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		final Context context = this;
+		/*
+		 * pokretanje postavki ukoliko je prvi put pokrenuta aplikacija
+		 */
 
 		boolean firstrun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
 				.getBoolean("firstrun", true);
 
-		// dialog prilikom prvog pokretanja
+		/* pokreni SettingsActivity klasu, ali samo prvi put */
 		if (firstrun) {
 
 			Intent i = new Intent(context, SettingsActivity.class);
 			startActivity(i);
 		}
-		// Save the state with shared preferences
+
+		/*
+		 * Spremi podatke o prosljeđenim preferencama
+		 */
 		getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
 				.putBoolean("firstrun", false).commit();
 
-		// gumb za ulaz u funkc. transakcije
+		/*
+		 * gumb za ulaz u funkc. transakcije onClick pokrećemo
+		 * TransactionActivity klasu, prikaz popisa transakcija
+		 */
 		ImageButton imgTransaction = (ImageButton) findViewById(R.id.imgTransaction);
 		imgTransaction.setOnClickListener(new OnClickListener() {
 
@@ -60,7 +73,10 @@ public class MainActivity extends Activity {
 			}
 		});
 
-		// gumb za ulaz u funkc. kategorije
+		/*
+		 * gumb za ulaz u funkc. kategorije onClick pokrećemo CategoriesActivity
+		 * klasu, prikaz popisa kategorija
+		 */
 		ImageButton imgCategory = (ImageButton) findViewById(R.id.imgCategory);
 		imgCategory.setOnClickListener(new OnClickListener() {
 			@Override
@@ -71,7 +87,10 @@ public class MainActivity extends Activity {
 			}
 		});
 
-		// gumb za ulaz u funkc. opcije
+		/*
+		 * gumb za ulaz u funkc. opcije onClick pokrećemo SettingsActivity
+		 * klasu, prikaz postavki
+		 */
 		ImageButton imgSettings = (ImageButton) findViewById(R.id.imgSettings);
 		imgSettings.setOnClickListener(new OnClickListener() {
 
@@ -83,7 +102,10 @@ public class MainActivity extends Activity {
 			}
 		});
 
-		// gumb za ulaz u funkc. statistika
+		/*
+		 * gumb za ulaz u funkc. statistika onClick pokrećemo Statistics klasu,
+		 * prikaz statistike
+		 */
 		ImageButton imgStatistics = (ImageButton) findViewById(R.id.imgStatistics);
 		imgStatistics.setOnClickListener(new OnClickListener() {
 
@@ -97,13 +119,17 @@ public class MainActivity extends Activity {
 
 	}
 
-
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
 	 */
 
+	/*
+	 * metoda za kreiranje menija u navigation tabu kreiramo gumb Izlaz, za
+	 * izlazak iz aplikacije
+	 */
 	public static final int EXIT = Menu.FIRST;
-
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -113,9 +139,16 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
 	 */
+
+	/*
+	 * metoda za upravljanje Izlaz gumbom unutar navigation taba
+	 */
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
@@ -128,3 +161,4 @@ public class MainActivity extends Activity {
 		}
 	}
 }
+

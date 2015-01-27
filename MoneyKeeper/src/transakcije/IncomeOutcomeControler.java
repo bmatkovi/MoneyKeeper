@@ -207,7 +207,7 @@ public abstract class IncomeOutcomeControler extends Activity {
 
 							List<Kategorija> kk = Kategorija.getKategorije();
 							for (Kategorija kategorija : kk) {
-								if (kategorija.naziv.equals(varKategorija)) {
+								if (kategorija.naziv==varKategorija) {
 								} else {
 									katt.save();
 								}
@@ -218,7 +218,7 @@ public abstract class IncomeOutcomeControler extends Activity {
 
 							List<Korisnik> ko = Korisnik.getKorisnici();
 							for (Korisnik korisnik : ko) {
-								if (korisnik.ime.equals(varKorisnik)) {
+								if (korisnik.ime==varKorisnik) {
 								} else {
 									kor.save();
 								}

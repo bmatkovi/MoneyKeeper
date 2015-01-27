@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.activeandroid.query.Select;
 import com.activeandroid.util.Log;
+import com.example.moneykeeper.R;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -14,12 +15,12 @@ import android.widget.EditText;
 import db.Korisnik;
 import db.Racun;
 
-public class MyDialog {
+public class DialogControler {
 
 	private Dialog dialog;
 	private Activity activity;
 
-	public MyDialog(Activity activity) {
+	public DialogControler(Activity activity) {
 		this.activity = activity;
 	}
 

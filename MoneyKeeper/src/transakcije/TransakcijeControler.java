@@ -110,11 +110,10 @@ public abstract class TransakcijeControler extends Activity {
 		for (Transakcija tr : promet) {
 			if (tr.vrsta == 1) {
 				builder1.append("Iznos: ").append(tr.iznos).append(" Opis: ")
-						.append(tr.opis).append(" Kategorija: ")
-						.append(tr.Kategorija.naziv).append("\n");
+						.append(tr.opis).append(" Kategorija: ");
 
 				list11.add("Iznos: " + tr.iznos + "\n" + "Opis: " + tr.opis
-						+ "\n" + "Kategorija: " + tr.Kategorija.naziv);
+						+ "\n" + "Kategorija: " +tr.Kategorija.naziv );
 			}
 
 		}
@@ -155,7 +154,7 @@ public abstract class TransakcijeControler extends Activity {
 				builder11.append("Iznos: ").append(tr.iznos).append(" Opis: ")
 						.append(tr.opis).append("Kategorija: ").append("\n");
 				listO.add("Iznos: " + tr.iznos + "\n" + "Opis: " + tr.opis
-						+ "\n" + "Kategorija: " + tr.Kategorija.naziv);
+						+ "\n" + "Kategorija: "+ tr.Kategorija.naziv );
 			}
 
 		}
